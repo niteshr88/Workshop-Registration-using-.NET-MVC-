@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WorkshopModelStoreContainer" CdmEntityContainer="WorkshopEntities">
+    <EntitySetMapping Name="wssregistrations">
+      <EntityTypeMapping TypeName="WorkshopModel.wssregistration">
+        <MappingFragment StoreEntitySet="wssregistration">
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="technology" ColumnName="technology" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contactNo" ColumnName="contactNo" />
+          <ScalarProperty Name="course" ColumnName="course" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="semester" ColumnName="semester" />
+          <ScalarProperty Name="college" ColumnName="college" />
+          <ScalarProperty Name="regsdate" ColumnName="regsdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="WorkshopModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="rollnumber" ColumnName="rollnumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="st_ID" ColumnName="st_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="technologies">
+      <EntityTypeMapping TypeName="WorkshopModel.technology">
+        <MappingFragment StoreEntitySet="technologies">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="techID" ColumnName="techID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WorkshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="wssregistration">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="technology" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="contactNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="course" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="branch" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="semester" Type="Int32" />
+    <Property Name="college" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="regsdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="WorkshopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="wssregistrations" EntityType="Self.wssregistration" />
+    <EntitySet Name="students" EntityType="WorkshopModel.student" />
+    <EntitySet Name="technologies" EntityType="WorkshopModel.technology" />
+  </EntityContainer>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="st_ID" />
+    </Key>
+    <Property Name="st_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rollnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="technology">
+    <Key>
+      <PropertyRef Name="techID" />
+    </Key>
+    <Property Name="techID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+</Schema>

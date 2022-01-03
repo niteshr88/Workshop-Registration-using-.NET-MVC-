@@ -1,0 +1,5 @@
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Common\bin\Debug\Workshop.Common.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Common\bin\Debug\Workshop.Common.pdb
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Common\obj\Debug\Workshop.Common.csproj.CoreCompileInputs.cache
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Common\obj\Debug\Workshop.Common.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Common\obj\Debug\Workshop.Common.pdb

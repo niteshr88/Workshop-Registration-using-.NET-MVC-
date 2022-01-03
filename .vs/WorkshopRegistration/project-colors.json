@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cb829ef5-1aba-4113-b86f-a464df7688f6": {
+      "ProjectGuid": "cb829ef5-1aba-4113-b86f-a464df7688f6",
+      "DisplayName": "Workshop.DAL",
+      "ColorIndex": 0
+    },
+    "1705cc76-7dda-4b89-a29f-62942bbffd23": {
+      "ProjectGuid": "1705cc76-7dda-4b89-a29f-62942bbffd23",
+      "DisplayName": "Workshop.Core",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WorkshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="st_ID" />
+    </Key>
+    <Property Name="st_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="rollnumber" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="technologies">
+    <Key>
+      <PropertyRef Name="techID" />
+    </Key>
+    <Property Name="techID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="250" />
+    <Property Name="status" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="wssregistration">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="250" />
+    <Property Name="location" Type="varchar" MaxLength="250" />
+    <Property Name="technology" Type="varchar" MaxLength="250" />
+    <Property Name="email" Type="varchar" MaxLength="250" />
+    <Property Name="contactNo" Type="varchar" MaxLength="250" />
+    <Property Name="course" Type="varchar" MaxLength="250" />
+    <Property Name="branch" Type="varchar" MaxLength="250" />
+    <Property Name="semester" Type="int" />
+    <Property Name="college" Type="varchar" MaxLength="350" />
+    <Property Name="regsdate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="WorkshopModelStoreContainer">
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="technologies" EntityType="Self.technologies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="wssregistration" EntityType="Self.wssregistration" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

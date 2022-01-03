@@ -1,0 +1,14 @@
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.Core.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.Core.pdb
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.Common.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.DAL.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\EntityFramework.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.Common.pdb
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.DAL.pdb
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\Workshop.DAL.dll.config
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\bin\Debug\EntityFramework.xml
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\obj\Debug\Workshop.Core.csprojAssemblyReference.cache
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\obj\Debug\Workshop.Core.csproj.CoreCompileInputs.cache
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\obj\Debug\Workshop.Core.csproj.CopyComplete
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\obj\Debug\Workshop.Core.dll
+F:\nitesh\programming-lang\C#\WorkshopRegistration\Workshop.Core\obj\Debug\Workshop.Core.pdb

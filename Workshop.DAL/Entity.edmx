@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WorkshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="st_ID" />
+          </Key>
+          <Property Name="st_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="rollnumber" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="technologies">
+          <Key>
+            <PropertyRef Name="techID" />
+          </Key>
+          <Property Name="techID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="250" />
+          <Property Name="status" Type="bit" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="wssregistration">
+          <Key>
+            <PropertyRef Name="studentID" />
+          </Key>
+          <Property Name="studentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="250" />
+          <Property Name="location" Type="varchar" MaxLength="250" />
+          <Property Name="technology" Type="varchar" MaxLength="250" />
+          <Property Name="email" Type="varchar" MaxLength="250" />
+          <Property Name="contactNo" Type="varchar" MaxLength="250" />
+          <Property Name="course" Type="varchar" MaxLength="250" />
+          <Property Name="branch" Type="varchar" MaxLength="250" />
+          <Property Name="semester" Type="int" />
+          <Property Name="college" Type="varchar" MaxLength="350" />
+          <Property Name="regsdate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="WorkshopModelStoreContainer">
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="technologies" EntityType="Self.technologies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="wssregistration" EntityType="Self.wssregistration" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WorkshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="wssregistration">
+          <Key>
+            <PropertyRef Name="studentID" />
+          </Key>
+          <Property Name="studentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="location" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="technology" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="contactNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="course" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="branch" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="semester" Type="Int32" />
+          <Property Name="college" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="regsdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="WorkshopEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="wssregistrations" EntityType="Self.wssregistration" />
+          <EntitySet Name="students" EntityType="WorkshopModel.student" />
+          <EntitySet Name="technologies" EntityType="WorkshopModel.technology" />
+        </EntityContainer>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="st_ID" />
+          </Key>
+          <Property Name="st_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rollnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="technology">
+          <Key>
+            <PropertyRef Name="techID" />
+          </Key>
+          <Property Name="techID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Boolean" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WorkshopModelStoreContainer" CdmEntityContainer="WorkshopEntities">
+          <EntitySetMapping Name="wssregistrations">
+            <EntityTypeMapping TypeName="WorkshopModel.wssregistration">
+              <MappingFragment StoreEntitySet="wssregistration">
+                <ScalarProperty Name="studentID" ColumnName="studentID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="technology" ColumnName="technology" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="contactNo" ColumnName="contactNo" />
+                <ScalarProperty Name="course" ColumnName="course" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="semester" ColumnName="semester" />
+                <ScalarProperty Name="college" ColumnName="college" />
+                <ScalarProperty Name="regsdate" ColumnName="regsdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="WorkshopModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="rollnumber" ColumnName="rollnumber" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="st_ID" ColumnName="st_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="technologies">
+            <EntityTypeMapping TypeName="WorkshopModel.technology">
+              <MappingFragment StoreEntitySet="technologies">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="techID" ColumnName="techID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
